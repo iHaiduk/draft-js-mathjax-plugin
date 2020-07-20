@@ -131,7 +131,7 @@ const createMathjaxPlugin = (config = {}) => {
       store.getReadOnly = getReadOnly
       store.setReadOnly = setReadOnly
       store.getEditorRef = getEditorRef
-      store.completion = store.completion(getEditorState())
+      store.completion = typeof store.completion === 'function' ? store.completion(getEditorState()) : store.completion
       // store.completion.mostUsedTeXCommands =
       //   getInitialMostUsedTeXCmds(getEditorState())
     },
