@@ -14,18 +14,18 @@ export const myKeyBindingFn = getEditorState => (e) => {
   if (e.keyCode === /* m */ 77 && hasCommandModifier(e)) {
     return 'insert-texblock'
   }
-  if (e.key === /* $ */ '$' /* && hasCommandModifier(e)*/) {
-    const c = getEditorState().getCurrentContent()
-    const s = getEditorState().getSelection()
-    if (!s.isCollapsed()) return 'insert-inlinetex'
-    const bk = s.getStartKey()
-    const b = c.getBlockForKey(bk)
-    const offset = s.getStartOffset() - 1
-    if (b.getText()[offset] === '\\') {
-      return `insert-char-${e.key}`
-    }
-    return 'insert-inlinetex'
-  }
+  // if (e.key === /* $ */ '$' /* && hasCommandModifier(e)*/) {
+  //   const c = getEditorState().getCurrentContent()
+  //   const s = getEditorState().getSelection()
+  //   if (!s.isCollapsed()) return 'insert-inlinetex'
+  //   const bk = s.getStartKey()
+  //   const b = c.getBlockForKey(bk)
+  //   const offset = s.getStartOffset() - 1
+  //   if (b.getText()[offset] === '\\') {
+  //     return `insert-char-${e.key}`
+  //   }
+  //   return 'insert-inlinetex'
+  // }
   // if (e.key === '*') {
   //   return 'test'
   // }

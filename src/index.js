@@ -149,3 +149,7 @@ const createMathjaxPlugin = (config = {}) => {
 }
 
 export default createMathjaxPlugin
+
+export {
+  insertTeX,
+}
